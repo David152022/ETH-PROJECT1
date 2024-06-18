@@ -29,9 +29,6 @@ pragma solidity 0.8.26;
     5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
        to the amount that is supposed to be burned.
 */
-//SPDX-License-Identifier:MIT
-pragma solidity 0.8.26;
-
 contract MyToken {
 
     // public variables here
