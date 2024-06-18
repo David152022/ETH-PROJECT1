@@ -3,7 +3,7 @@
 This Solidity program is a simple demo code for minting and burning token. The purpose of the program is to demonstrate the mechanism of minting , burning and supply of the tokens
 
 ## Description
-This is a Solidity contract for a custom cryptocurrency token called "SILVER" (abbreviated as "SLA"). It has public variables to store the token's name, abbreviation, and total supply. The contract also includes a mapping to track the balance of each address. It provides two main functions: `mintMyTokens` to increase the total supply and an address's balance, and `burnMyToken` to decrease the total supply and an address's balance, with a conditional check to prevent burning more tokens than an address holds.
+This is a Solidity contract for a custom cryptocurrency token called "BROWN" (abbreviated as "BRO"). It has public variables to store the token's name, abbreviation, and total supply. The contract also includes a mapping to track the balance of each address. It provides two main functions: `mintMyTokens` to increase the total supply and an address's balance, and `burnMyToken` to decrease the total supply and an address's balance, with a conditional check to prevent burning more tokens than an address holds.
 ## Getting Started
 
 ### Executing program
@@ -29,34 +29,6 @@ pragma solidity 0.8.26;
     5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
        to the amount that is supposed to be burned.
 */
-
-contract MyToken{
-        
-        // public variables here
-        string public tokenName = "SILVER";
-        string public tokenAbbry = "SLA";
-        uint public totalSupply = 0;
-    
-        
-        // mapping variables here
-        mapping(address => uint) public balances;
-        
-        // mint function 
-        function mintMyTokens(address _address1, uint _value) public{
-            totalSupply += _value;
-            balances [_address1] += _value;
-        }
-        // burn function
-        function burnMyToken(address _address1, uint _value)public{
-            if (balances[_address1] >= _value){
-                totalSupply -= _value;
-                balances[_address1] -= _value;
-            }
-        }
-   }
-
-
-
 
 ```
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.26" (or another compatible version), and then click on the "Compile MyToken.sol" button.
